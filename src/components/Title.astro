@@ -8,17 +8,41 @@ const { text } = Astro.props
 
 <style>
     h2 {
-        max-width: 450px;
-        font-size: 40px;
-        text-transform: uppercase;
-        margin: 0;
-        color: #1e1e1e;
-        text-align: center;
-        font-weight: 500;
-        background: linear-gradient(89.56deg, #1E1E1E 44.7%, rgba(30, 30, 30, 0) 137.42%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+    max-width: 500px;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+
+    /* Color de respaldo */
+    color: #1e1e1e;
+
+    /* Gradient seguro */
+    background: linear-gradient(
+        90deg,
+        #1e1e1e 0%,
+        #1e1e1e 70%,
+        rgba(30, 30, 30, 0.6) 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* FIX CLAVE */
+    -webkit-text-fill-color: transparent;
+
+    /* FIX anti-superposición */
+    line-height: 1.2;
+    letter-spacing: 1px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+@media screen and (max-width: 700px) {
+    h2 {
+        font-size: 28px;
+        max-width: 90%;
     }
+}
+
 </style>
