@@ -8,61 +8,61 @@ import SkillCard from "../components/SkillCard.astro";
 import Title from "../components/Title.astro";
 ---
 
-<Layout title="Minimalist Dragon | Portfolio">
+<Layout title="Angela Reina | Portfolio">
 	<header><Navbar /></header>
 		<main>
 			<section class="about">
-				<img src='foto.jpeg' alt='profile picture'/>
+				<img src='foto.jpeg' alt='Foto de perfil de Angela Reina/>
 				<article>
 					<p>¡Hola!, soy Angela Reina</p>
-					<Title text='Ingeniera de Sistemasr'/>
+					<Title text='Ingeniera de Sistemas'/>
 				</article>
-				<Button message='Latest Posts' icon='/external-link.svg' link='#'/>
+				<Button  message='Ver proyectos' icon='/external-link.svg' link='#work'/>
 			</section>
 			<section class="skills">
-				<Title text='Skills & Technologies'/>
+				<Title text='Habilidades y Tecnologías'/>
 				<section>
 					<SkillCard 
-						title='Frontend Development'
-						description='Developing websites with JavaScript, React, and Astro'
+						title='Frontend'
+						description='HTML, CSS y JavaScript y con experiencia en Astro.'
 						icon='/design.svg'
 					/>
 					<SkillCard 
-						title='Backend Development'
-						description=' Developing APIs with JavaScript and Python'
-						icon='/server.svg'
+  						title='Backend Development'
+  						description='Desarrollo de lógica de negocio y APIs REST con Java, Spring Boot y arquitectura por capas (DAO, DTO, Services).'
+ 						icon='/server.svg'
 					/>
 					<SkillCard 
-						title='Databases'
-						description='Databases like PostgreSQL and MongoDB.'
-						icon='/database.svg'
+  						title='Databases'
+  						description='Diseño y gestión de bases de datos relacionales con MySQL, PostgreSQL y Oracle, incluyendo modelado, normalización y consultas SQL.'
+  						icon='/database.svg'
 					/>
 				</section>
 			</section>
 			<section class="work">
-				<Title text='My Work'/>
+				<Title text='Proyectos'/>
 				<section>
 					<ProjectCard 
-					title='My Project #1'
-					description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-					link='#'
+  						title='App de Productividad'
+  						description='Aplicación para organización académica y personal.'
+  						link='https://github.com/angereina/mi-proyecto'
 					/>
 					<ProjectCard 
-						title='My Project #2'
-						description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-						link='#'
+  						title="Gestión de Base de Datos"
+  						description="Proyecto académico enfocado en modelado entidad-relación, normalización y consultas SQL."
+  						link="#"
 					/>
 					<ProjectCard 
-						title='My Project #3'
-						description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-						link='#'
+  						title="API con Arquitectura por Capas"
+  						description="Desarrollo de una API REST en Java aplicando arquitectura por capas, DAO, DTO y validaciones de negocio."
+  						link="#"
 					/>
 				</section>
 				
 			</section>
 			<section class="contact">
-				<Title text='Tell me about your next project'/>
-				<Button message='Send Message' icon='/email.svg' link='mailto:example@example.com'/>
+				<Title text='Hablemos de tu próximo proyecto'/>
+				<Button message='Send Message' icon='/email.svg' link='mailto:angelareina-0106@hotmail.com'/>
 			</section>
 		</main>
 		<Footer />
