@@ -26,6 +26,7 @@ import Title from "../components/Title.astro";
   					link="https://youtube.com/shorts/GQstBFLlADU?si=XEcwxR6592Qy4oLt"
 				/>
 			</section>
+
 			<section class="skills">
 				<Title text='Habilidades y Tecnologías'/>
 				<section>
@@ -46,6 +47,93 @@ import Title from "../components/Title.astro";
 					/>
 				</section>
 			</section>
+
+			<!-- SECCIÓN MER -->
+			<section class="evidence-section" id="mer">
+			    <div class="evidence-header">
+			        <Title text='Modelo Entidad-Relación (MER)'/>
+			        <p class="evidence-desc">Diseños conceptuales de bases de datos aplicando entidades, relaciones, atributos y cardinalidades en notación Peter Chen.</p>
+			    </div>
+			    <div class="evidence-grid">
+			        <div class="evidence-card">
+			            <img src="/Residuos.drawio.png" alt="MER Residuos Tóxicos" />
+			            <div class="evidence-info">
+			                <h3>MER – Residuos Tóxicos</h3>
+			                <span class="tag">Bases de Datos 1</span>
+			            </div>
+			        </div>
+			        <div class="evidence-card">
+			            <img src="/Comidas.drawio.png" alt="MER Comidas a Domicilio" />
+			            <div class="evidence-info">
+			                <h3>MER – Comidas a Domicilio</h3>
+			                <span class="tag">Bases de Datos 1</span>
+			            </div>
+			        </div>
+			        <div class="evidence-card">
+			            <img src="/Metro.drawio.png" alt="MER Metro de Bogotá" />
+			            <div class="evidence-info">
+			                <h3>MER – Metro de Bogotá</h3>
+			                <span class="tag">Bases de Datos 1</span>
+			            </div>
+			        </div>
+			        <div class="evidence-card">
+			            <img src="/Innova.drawio.png" alt="MER Soluciones Innova" />
+			            <div class="evidence-info">
+			                <h3>MER – Soluciones Innova</h3>
+			                <span class="tag">Bases de Datos 1</span>
+			            </div>
+			        </div>
+			        <div class="evidence-card">
+			            <img src="/Taller.drawio(1).png" alt="MER Taller Mecánico" />
+			            <div class="evidence-info">
+			                <h3>MER – Taller Mecánico</h3>
+			                <span class="tag">Bases de Datos 1</span>
+			            </div>
+			        </div>
+			    </div>
+			</section>
+
+			<!-- SECCIÓN MR -->
+			<section class="evidence-section" id="mr">
+				<div class="evidence-header">
+					<Title text='Modelo Relacional (MR)'/>
+					<p class="evidence-desc">Transformación del modelo conceptual al modelo lógico relacional, definiendo tablas, claves primarias y foráneas.</p>
+				</div>
+				<div class="evidence-grid">
+					<div class="evidence-card empty">
+						<div class="evidence-img-placeholder">
+							<span>MR</span>
+						</div>
+						<div class="evidence-info">
+							<h3>Próximamente</h3>
+							<p>Aquí irán las evidencias del Modelo Relacional.</p>
+							<span class="tag">Bases de Datos 1</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SECCIÓN SQL -->
+			<section class="evidence-section" id="sql">
+				<div class="evidence-header">
+					<Title text='SQL'/>
+					<p class="evidence-desc">Consultas, scripts y prácticas de SQL aplicando DDL, DML y consultas avanzadas sobre bases de datos relacionales.</p>
+				</div>
+				<div class="evidence-grid">
+					<div class="evidence-card empty">
+						<div class="evidence-img-placeholder">
+							<span>SQL</span>
+						</div>
+						<div class="evidence-info">
+							<h3>Próximamente</h3>
+							<p>Aquí irán las evidencias de SQL.</p>
+							<span class="tag">Bases de Datos 1</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SECCIÓN PROYECTO -->
 			<section class="work" id="work"> 
 				<Title text='Proyectos'/>
 				<section>
@@ -65,8 +153,8 @@ import Title from "../components/Title.astro";
   						link="#"
 					/>
 				</section>
-				
 			</section>
+
 			<section class="contact">
 				<Title text='Hablemos de tu próximo proyecto'/>
 				<Button message='Send Message' icon='/email.svg' link='mailto:angelareina-0106@hotmail.com'/>
@@ -132,6 +220,106 @@ import Title from "../components/Title.astro";
 		justify-content: center;
 	}
 
+	/* EVIDENCIAS */
+	.evidence-section {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		width: 100%;
+		align-items: center;
+		border-bottom: 1px solid rgba(30, 30, 30, 0.3);
+		padding: 0px 20px 100px 20px;
+	}
+
+	.evidence-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		text-align: center;
+	}
+
+	.evidence-desc {
+		color: #666;
+		font-size: 0.95rem;
+		max-width: 600px;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.evidence-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 1.5rem;
+		width: 100%;
+	}
+
+	.evidence-card {
+		border-radius: 12px;
+		overflow: hidden;
+		border: 1px solid rgba(30, 30, 30, 0.15);
+		background: rgba(30, 30, 30, 0.02);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.evidence-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+	}
+
+	.evidence-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		display: block;
+	}
+
+	.evidence-img-placeholder {
+		width: 100%;
+		height: 200px;
+		background: linear-gradient(135deg, #1e1e1e 0%, #3a3a3a 100%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.evidence-img-placeholder span {
+		color: rgba(255, 255, 255, 0.2);
+		font-size: 3rem;
+		font-weight: 700;
+		letter-spacing: 4px;
+	}
+
+	.evidence-info {
+		padding: 1.2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.evidence-info h3 {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #1e1e1e;
+	}
+
+	.evidence-info p {
+		font-size: 0.85rem;
+		color: #666;
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	.tag {
+		font-size: 0.72rem;
+		padding: 0.25rem 0.7rem;
+		border-radius: 20px;
+		background: rgba(30, 30, 30, 0.08);
+		color: #1e1e1e;
+		width: fit-content;
+	}
+
 	.work {
 		display: flex;
 		flex-direction: column;
@@ -169,6 +357,10 @@ import Title from "../components/Title.astro";
 
 		.about > img {
 			width: 100px;
+		}
+
+		.evidence-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
